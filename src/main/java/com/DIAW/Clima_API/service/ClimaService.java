@@ -32,7 +32,7 @@ public class ClimaService {
     }
 
     public String getTempo(String cidade) {
-        String apiUrl = BASE_URL_2 + "search?name=" + cidade + "&count=1&language=pt&format=json";
+        String apiUrl = BASE_URL_2 + "search?name=" + cidade;
         return consultarURL(apiUrl);
     }
 

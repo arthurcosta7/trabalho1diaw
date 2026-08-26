@@ -15,12 +15,16 @@ public class Controller {
         this.service = service;
     }
 
+    @GetMapping("/")
+    public String start() {
+        return "API iniciada";
+    }
     @GetMapping("/climaBH")
     public String getTempoBH() {
         return service.getTempoBH();
     }
 
-    @GetMapping("/clima")
+    @GetMapping("/clima/{cidade}")
     public String getTempo(@PathVariable String cidade) {
         return service.getTempo(cidade);
     }
